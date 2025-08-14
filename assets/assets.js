@@ -6,10 +6,11 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
-import firebase from './firebase.png';
+import postgresql from './postgresql.png';
+import mysql from './mysql.png';
+import docker from './docker.png';
 import figma from './figma.png';
 import git from './git.png';
-import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -28,7 +29,9 @@ import menu_white from './menu-white.png';
 import close_black from './close-black.png';
 import close_white from './close-white.png';
 import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
+import backend_icon from './backend.png';
+import frontend_icon from './frontend.png';
+import webflow from './iwebflow.png';
 import ui_icon from './ui-icon.png';
 import graphics_icon from './graphics-icon.png';
 import right_arrow from './right-arrow.png';
@@ -45,10 +48,11 @@ export const assets = {
   project_icon,
   project_icon_dark,
   vscode,
-  firebase,
+  postgresql,
+  mysql,
+  docker,
   figma,
   git,
-  mongodb,
   right_arrow_white,
   logo,
   logo_dark,
@@ -67,7 +71,9 @@ export const assets = {
   close_black,
   close_white,
   web_icon,
-  mobile_icon,
+  backend_icon,
+  frontend_icon,
+  webflow,
   ui_icon,
   graphics_icon,
   right_arrow,
@@ -102,27 +108,27 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: 'Web design',
+    title: 'Full Stack Web Development',
     description: 'Web development is the process of building, programming...',
     link: '',
   },
   {
-    icon: assets.mobile_icon,
-    title: 'Mobile app',
+    icon: assets.backend_icon,
+    title: 'Backend Development',
     description:
       'Mobile app development involves creating software for mobile devices...',
     link: '',
   },
   {
-    icon: assets.ui_icon,
-    title: 'UI/UX design',
+    icon: assets.frontend_icon,
+    title: 'Frontend Development',
     description:
       'UI/UX design focuses on creating a seamless user experience...',
     link: '',
   },
   {
-    icon: assets.graphics_icon,
-    title: 'Graphics design',
+    icon: assets.webflow,
+    title: 'Webflow Development',
     description: 'Creative design solutions to enhance visual communication...',
     link: '',
   },
@@ -161,8 +167,9 @@ export const infoList = [
 
 export const toolsData = [
   assets.vscode,
-  assets.firebase,
-  assets.mongodb,
+  assets.postgresql,
+  assets.mysql,
+  assets.docker,
   assets.figma,
   assets.git,
 ];
