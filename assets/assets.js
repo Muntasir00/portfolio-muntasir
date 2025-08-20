@@ -13,6 +13,12 @@ import figma from './figma.png';
 import git from './git.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
+import muntasir_mamun_logo from './muntasir_mamun_logo.png';
+import whatsapp from './whatsapp.png';
+import facebook from './facebook.png';
+import linkedin from './linkedin.png';
+import github from './github.png';
+import instagram from './instagram.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
@@ -55,6 +61,8 @@ export const assets = {
   git,
   right_arrow_white,
   logo,
+  muntasir_mamun_logo,
+  github,
   logo_dark,
   mail_icon,
   mail_icon_dark,
@@ -68,6 +76,10 @@ export const assets = {
   arrow_icon_dark,
   menu_black,
   menu_white,
+  whatsapp,
+  facebook,
+  instagram,
+  linkedin,
   close_black,
   close_white,
   web_icon,
