@@ -97,22 +97,22 @@ export const assets = {
 export const workData = [
   {
     title: 'Frontend project',
-    description: 'Web Design',
+    description: 'Web Design & Development',
     bgImage: '/work-1.png',
   },
   {
-    title: 'Geo based app',
-    description: 'Mobile App',
+    title: 'Backend project',
+    description: 'Web Design & Development',
     bgImage: '/work-2.png',
   },
   {
-    title: 'Photography site',
-    description: 'Web Design',
+    title: 'Full Stack project',
+    description: 'Web Design & Development',
     bgImage: '/work-3.png',
   },
   {
-    title: 'UI/UX designing',
-    description: 'UI/UX Design',
+    title: 'Odoo Development',
+    description: 'ERP Management',
     bgImage: '/work-4.png',
   },
 ];
@@ -128,14 +128,14 @@ export const serviceData = [
     icon: assets.backend_icon,
     title: 'Backend Development',
     description:
-      'Mobile app development involves creating software for mobile devices...',
+      'Backend development involves creating backend for progressive...',
     link: '',
   },
   {
     icon: assets.frontend_icon,
     title: 'Frontend Development',
     description:
-      'UI/UX design focuses on creating a seamless user experience...',
+      'Frontend Development focuses on creating a seamless user experience...',
     link: '',
   },
   {

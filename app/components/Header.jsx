@@ -15,8 +15,8 @@ const Header = () => {
         Full Stack Developer based in Bangladesh
       </h1>
       <p className='max-w-2xl mx-auto font-Ovo'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, odit
-        eveniet? Incidunt, minus! Aperiam dolor facilis quae ab neque explicabo.
+        Full Stack Developer with 3+ years’ experience in Python/Django,
+        React/Next.js, Docker, CI/CD, Agile, and Odoo ERP customization.
       </p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <a
@@ -28,7 +28,7 @@ const Header = () => {
         </a>
 
         <a
-          href='/sample_resume.pdf'
+          href='/MuntasirMamun.pdf'
           download
           className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'
         >

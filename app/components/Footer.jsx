@@ -73,8 +73,14 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='border-t border-gray-400 mx-[10%] mt-12 py-6'>
-        © {new Date().getFullYear()} Muntasir Mamun. All rights reserved.
+      <div className='border-t border-gray-400 mx-[10%] mt-12 py-6 text-center text-sm text-gray-500'>
+        ©{' '}
+        {new Date().toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}{' '}
+        Muntasir Mamun. All rights reserved.
       </div>
     </div>
   );

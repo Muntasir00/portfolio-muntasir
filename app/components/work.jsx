@@ -8,9 +8,8 @@ const Work = () => {
       <h4 className='text-center mb-2 text-lg font-Ovo'>My Portfolio</h4>
       <h2 className='text-center text-5xl font-Ovo'>My Latest Work</h2>
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet rem ex
-        nam autem libero quae. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Eaque, aspernatur?
+        Welcome to my web development portfolio! Explore a collection of
+        projects showcasing my expertise in front-end and back-end development.
       </p>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 my-10'>

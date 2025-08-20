@@ -18,13 +18,12 @@ const About = () => {
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-2xl font-Ovo'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-            repudiandae eveniet facilis magnam quaerat eos distinctio reiciendis
-            sit quas nesciunt error laudantium non, dolore nisi ad quis culpa
-            exercitationem pariatur rerum aperiam, perspiciatis cupiditate!
-            Eveniet debitis quae sequi quis labore.laudantium non, dolore nisi
-            ad quis culpa exercitationem pariatur rerum aperiam, perspiciatis
-            cupiditate! Eveniet debitis quae sequi quis labore
+            Full Stack Developer with 3+ years of experience in backend
+            development, API design, and modern frontend frameworks. Skilled in
+            building scalable backend systems with Python/Django and
+            React/Next.js for responsive user interfaces. Experienced in Agile
+            teams, containerization (Docker), CI/CD automation (GitHub Actions),
+            and ERP customizations with Odoo.
           </p>
 
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
@@ -40,7 +39,7 @@ const About = () => {
             ))}
           </ul>
 
-          <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
+          <h3 className='my-6 text-gray-900 font-Ovo'>Tools I use</h3>
           <ul className='flex items-center gap-3 sm:gap-5'>
             {toolsData.map((tool, index) => (
               <li
