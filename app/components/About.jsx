@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
       <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
-      <h2 className='text-center text-5xl font-Ovo'>About Me</h2>
+      <h2 className='text-center text-5xl font-Ovo '>About Me</h2>
 
       <div className='flex w-full flex-col lg:flex-row items-stretch gap-20 lg:gap-0 my-20 '>
         <div className='w-[70%] sm:w-[50%] lg:w-[30%] mx-w-[500px] rounded-3xl pl-2 mx-auto'>
@@ -17,7 +17,7 @@ const About = () => {
           />
         </div>
         <div className='flex-l mx-auto'>
-          <p className='mb-10 max-w-2xl font-Ovo [@media(min-width:2048px)]:text-2xl text-gray-700'>
+          <p className='mb-10 max-w-2xl font-ovo [@media(min-width:2048px)]:text-2xl text-gray-700'>
             Full Stack Developer with 3+ years of experience in backend
             development, API design, and modern frontend frameworks. Skilled in
             building scalable backend systems with Python/Django and
