@@ -8,7 +8,7 @@ const About = () => {
       <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
       <h2 className='text-center text-5xl font-Ovo '>About Me</h2>
 
-      <div className='flex w-full flex-col lg:flex-row items-stretch gap-20 lg:gap-0 my-20 '>
+      <div className='flex w-full flex-col lg:flex-row items-stretch gap-20 my-20 '>
         <div className='w-[70%] sm:w-[50%] lg:w-[30%] mx-w-[500px] rounded-3xl pl-2 mx-auto'>
           <Image
             src={assets.user_image}
