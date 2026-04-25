@@ -15,7 +15,7 @@ const Header = () => {
         Full Stack Developer based in Bangladesh
       </h1>
       <p className='max-w-2xl mx-auto font-Ovo'>
-        Full Stack Developer with 3+ years’ experience in
+        Full Stack Developer with 4+ years’ experience in
         Python/Django,NodeJS,NestJS,NodeJS React/Next.js, Docker, CI/CD, Agile,
         and AI software development.
       </p>

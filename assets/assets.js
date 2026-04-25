@@ -103,7 +103,7 @@ export const workData = [
     title: "SaaS  Development project",
     description:
       " Multi Tenant SaaS Application with Appoinment, CRM and invoicing in one platform",
-    bgImage: "/SAAS_project.png",
+    bgImage: "/work-4.png",
   },
   {
     title: "Full Stack project",
@@ -128,6 +128,13 @@ export const workData = [
 
 export const serviceData = [
   {
+    icon: assets.saas,
+    title: "SaaS Development & AI Integration",
+    description:
+      "SaaS Development involves creating cloud-based software solutions that are accessible via the internet, while AI Integration enhances these applications with intelligent features and automation capabilities.",
+    link: "",
+  },
+  {
     icon: assets.web_icon,
     title: "Full Stack Web Development",
     description:
@@ -148,13 +155,7 @@ export const serviceData = [
       "Frontend Development focuses on creating the user interface and user experience of web applications, using modern frameworks and technologies to build responsive and visually appealing websites.",
     link: "",
   },
-  {
-    icon: assets.saas,
-    title: "SaaS Development & AI Integration",
-    description:
-      "SaaS Development involves creating cloud-based software solutions that are accessible via the internet, while AI Integration enhances these applications with intelligent features and automation capabilities.",
-    link: "",
-  },
+  
 ];
 
 export const infoList = [
