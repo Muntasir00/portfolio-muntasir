@@ -1,6 +1,6 @@
-import React from 'react';
-import { assets } from '@/assets/assets';
-import Image from 'next/image';
+import React from "react";
+import { assets } from "@/assets/assets";
+import Image from "next/image";
 const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 '>
@@ -15,8 +15,9 @@ const Header = () => {
         Full Stack Developer based in Bangladesh
       </h1>
       <p className='max-w-2xl mx-auto font-Ovo'>
-        Full Stack Developer with 3+ years’ experience in Python/Django,
-        React/Next.js, Docker, CI/CD, Agile, and Odoo ERP customization.
+        Full Stack Developer with 3+ years’ experience in
+        Python/Django,NodeJS,NestJS,NodeJS React/Next.js, Docker, CI/CD, Agile,
+        and AI software development.
       </p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <a

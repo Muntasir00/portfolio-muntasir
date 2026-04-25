@@ -1,6 +1,6 @@
-import { assets, workData } from '@/assets/assets';
-import Image from 'next/image';
-import React from 'react';
+import { assets, workData } from "@/assets/assets";
+import Image from "next/image";
+import React from "react";
 
 const Work = () => {
   return (
@@ -27,19 +27,20 @@ const Work = () => {
                 <h2 className='font-semibold'>{project.title}</h2>
                 <p className='text-sm text-gray-700'>{project.description}</p>
               </div>
-              <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition duration-500'>
+              {/* <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition duration-500'>
                 <Image src={assets.send_icon} alt='send icon' className='w-5' />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
       </div>
 
       <a
-        href=''
+        href='#contact'
         className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-500 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500'
       >
-        Show More
+        Contact Me for full project details, demo and source code and other
+        projects
         <Image
           src={assets.right_arrow_bold}
           alt='Right Arrow'
