@@ -1,34 +1,37 @@
-import React from "react";
-import Image from "next/image";
-import { assets, serviceData } from "@/assets/assets";
+import React from 'react';
+import Image from 'next/image';
+import { serviceData } from '@/assets/assets';
 
 const Services = () => {
   return (
-    <div id='services' className='w-full px-[12%] py-10 scroll-mt-20'>
-      <h4 className='text-center mb-2 text-lg font-Ovo'>What I offer</h4>
-      <h2 className='text-center text-5xl font-Ovo'>My Services</h2>
-      <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+    <section
+      id='services'
+      className='w-full scroll-mt-20 px-5 py-14 sm:px-8 sm:py-16 md:px-12 lg:px-[10%] xl:px-[12%]'
+    >
+      <h4 className='mb-2 text-center text-base font-ovo sm:text-lg'>
+        What I offer
+      </h4>
+      <h2 className='text-center text-4xl font-ovo sm:text-5xl'>
+        My Services
+      </h2>
+      <p className='mx-auto mb-12 mt-5 max-w-2xl text-center text-sm leading-7 text-gray-700 sm:text-base'>
         I am a full stack developer providing end-to-end solutions using a
         variety of frontend and backend technologies.
       </p>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 my-10'>
-        {serviceData.map(({ icon, title, description, link }, index) => (
+      <div className='my-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+        {serviceData.map(({ icon, title, description }, index) => (
           <div
             key={index}
-            className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500'
+            className='h-full cursor-pointer rounded-lg border border-gray-400 px-5 py-8 duration-500 hover:-translate-y-1 hover:bg-lightHover hover:shadow-black sm:px-6 sm:py-10 lg:px-8 xl:py-12'
           >
             <Image src={icon} alt='Icon' className='w-12' />
-            <h3 className='text-lg my-4 text-gray-700'>{title}</h3>
-            <p className='text-sm text-gray-600 leading-5'>{description}</p>
-            {/* <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-              Read More{' '}
-              <Image src={assets.right_arrow} className='w-4' alt='Icon' />
-            </a> */}
+            <h3 className='my-4 text-lg text-gray-700'>{title}</h3>
+            <p className='text-sm leading-6 text-gray-600'>{description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

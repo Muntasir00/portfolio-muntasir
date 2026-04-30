@@ -27,32 +27,37 @@ const Contact = () => {
       setResult(data.message);
     }
   };
+
   return (
-    <div
+    <section
       id='contact'
-      className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg[length: 90%_auto]'
+      className='w-full scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-[length:150%_auto] bg-center bg-no-repeat px-5 py-14 sm:bg-[length:110%_auto] sm:px-8 sm:py-16 md:px-12 lg:bg-[length:90%_auto] lg:px-[10%] xl:px-[12%]'
     >
-      <h4 className='text-center mb-2 text-lg font-Ovo'>Connect With Me</h4>
-      <h2 className='text-center text-5xl font-Ovo'>Get In Touch</h2>
-      <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+      <h4 className='mb-2 text-center text-base font-ovo sm:text-lg'>
+        Connect With Me
+      </h4>
+      <h2 className='text-center text-4xl font-ovo sm:text-5xl'>
+        Get In Touch
+      </h2>
+      <p className='mx-auto mb-12 mt-5 max-w-2xl text-center text-sm leading-7 text-gray-700 sm:text-base'>
         I'd love to hear from you! If you have any questions, comments or
         feedback, please use the form below.
       </p>
 
-      <form onSubmit={onSubmit} className='mx-w-2xl mx-auto'>
-        <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8'>
+      <form onSubmit={onSubmit} className='mx-auto max-w-2xl'>
+        <div className='mb-6 mt-10 grid w-full grid-cols-1 gap-5 md:grid-cols-2 md:gap-6'>
           <input
             type='text'
             placeholder='Enter your name'
             required
-            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white'
+            className='w-full rounded-md border-[0.5px] border-gray-400 bg-white p-3 outline-none'
             name='name'
           />
           <input
-            type='text'
+            type='email'
             placeholder='Enter your email'
             required
-            className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white'
+            className='w-full rounded-md border-[0.5px] border-gray-400 bg-white p-3 outline-none'
             name='email'
           />
         </div>
@@ -60,12 +65,12 @@ const Contact = () => {
           rows='6'
           placeholder='Enter your message'
           required
-          className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6'
+          className='mb-6 w-full rounded-md border-[0.5px] border-gray-400 bg-white p-4 outline-none'
           name='message'
         ></textarea>
         <button
           type='submit'
-          className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500'
+          className='mx-auto flex w-full items-center justify-center gap-2 rounded-full bg-black/80 px-8 py-3 text-white duration-500 hover:bg-black sm:w-max'
         >
           Submit Now
           <Image
@@ -74,9 +79,11 @@ const Contact = () => {
             className='w-4'
           />
         </button>
-        <p className='text-center mt-4 text-gray-700 font-semibold'>{result}</p>
+        <p className='mt-4 text-center font-semibold text-gray-700'>
+          {result}
+        </p>
       </form>
-    </div>
+    </section>
   );
 };
 

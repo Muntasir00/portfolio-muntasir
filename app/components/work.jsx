@@ -1,37 +1,40 @@
-import { assets, workData } from "@/assets/assets";
-import Image from "next/image";
-import React from "react";
+import { assets, workData } from '@/assets/assets';
+import Image from 'next/image';
+import React from 'react';
 
 const Work = () => {
   return (
-    <div id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
-      <h4 className='text-center mb-2 text-lg font-Ovo'>My Portfolio</h4>
-      <h2 className='text-center text-5xl font-Ovo'>My Latest Work</h2>
-      <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+    <section
+      id='work'
+      className='w-full scroll-mt-20 px-5 py-14 sm:px-8 sm:py-16 md:px-12 lg:px-[10%] xl:px-[12%]'
+    >
+      <h4 className='mb-2 text-center text-base font-ovo sm:text-lg'>
+        My Portfolio
+      </h4>
+      <h2 className='text-center text-4xl font-ovo sm:text-5xl'>
+        My Latest Work
+      </h2>
+      <p className='mx-auto mb-12 mt-5 max-w-2xl text-center text-sm leading-7 text-gray-700 sm:text-base'>
         Welcome to my web development portfolio! Explore a collection of
         projects showcasing my expertise in front-end and back-end development.
       </p>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 my-10'>
+      <div className='my-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         {workData.map((project, index) => (
           <div
             key={index}
             style={{ backgroundImage: `url(${project.bgImage})` }}
-            className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
+            className='group relative min-h-[300px] cursor-pointer overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat sm:aspect-square sm:min-h-0'
           >
-            <div
-              className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500
-            group-hover:bottom-7 '
-            >
-              <div>
-              
-                <h2 className='font-semibold'>{project.title}</h2>
-                <p className='text-sm text-gray-700'>{project.description}</p>
-                
+            <div className='absolute bottom-4 left-1/2 flex max-h-[calc(100%-2rem)] w-[calc(100%-2rem)] -translate-x-1/2 items-center justify-between overflow-hidden rounded-md bg-white px-4 py-3 duration-500 group-hover:bottom-6 sm:bottom-5 sm:w-10/12 sm:px-5'>
+              <div className='min-w-0'>
+                <h2 className='text-sm font-semibold leading-5 sm:text-base'>
+                  {project.title}
+                </h2>
+                <p className='line-clamp-4 text-xs leading-5 text-gray-700 sm:line-clamp-3 sm:text-sm'>
+                  {project.description}
+                </p>
               </div>
-              {/* <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition duration-500'>
-                <Image src={assets.send_icon} alt='send icon' className='w-5' />
-              </div> */}
             </div>
           </div>
         ))}
@@ -39,17 +42,17 @@ const Work = () => {
 
       <a
         href='#contact'
-        className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-500 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500'
+        className='mx-auto my-16 flex w-full max-w-3xl flex-col items-center justify-center gap-2 rounded-full border-[0.5px] border-gray-500 px-5 py-3 text-center text-sm text-gray-700 duration-500 hover:bg-lightHover sm:my-20 sm:w-max sm:flex-row sm:px-10 sm:text-base'
       >
         Contact Me for full project details, demo and source code and other
         projects
         <Image
           src={assets.right_arrow_bold}
           alt='Right Arrow'
-          className='w-4'
+          className='w-4 shrink-0'
         />
       </a>
-    </div>
+    </section>
   );
 };
 

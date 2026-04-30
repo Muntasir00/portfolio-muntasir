@@ -1,133 +1,143 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
-  const sideMenuRef = useRef<HTMLUListElement | null>(null);
-  const openMenu = () => {
-    if (sideMenuRef.current) {
-      sideMenuRef.current.style.transform = 'translateX(-16rem)';
-    }
-  };
-  const closeMenu = () => {
-    if (sideMenuRef.current) {
-      sideMenuRef.current.style.transform = 'translateX(16rem)';
-    }
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const openMenu = () => setIsMenuOpen(true);
+  const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (scrollY > 50) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    });
-  });
+    const handleScroll = () => {
+      setIsScroll(window.scrollY > 50);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <div className='fixed top-0 right-0 w-11/20 -z-10 translate-y-[-80%]'>
+      <div className='pointer-events-none fixed top-0 right-0 -z-10 w-[60vw] min-w-[260px] max-w-[520px] translate-y-[-80%]'>
         <Image src={assets.header_bg_color} alt='' className='w-full' />
       </div>
       <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
-          isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''
+        className={`fixed z-50 flex w-full items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8 xl:px-[8%] ${
+          isScroll ? 'bg-white/75 backdrop-blur-lg shadow-sm' : ''
         }`}
       >
         <a href='#top'>
           <Image
             src={assets.logo}
-            className='w-28 cursor-pointer mr-14'
+            className='mr-4 w-24 cursor-pointer sm:w-28 lg:mr-8'
             alt='logo'
           />
         </a>
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            isScroll ? '' : 'bg-white shadow-sm bg-opacity-50'
+          className={`hidden items-center gap-5 rounded-full px-8 py-3 lg:flex xl:gap-8 xl:px-12 ${
+            isScroll ? '' : 'bg-white/60 shadow-sm'
           }`}
         >
           <li>
-            <a className='font-Ovo' href='#top'>
+            <a className='font-ovo' href='#top'>
               Home
             </a>
           </li>
           <li>
-            <a className='font-Ovo' href='#about'>
+            <a className='font-ovo' href='#about'>
               About me
             </a>
           </li>
           <li>
-            <a className='font-Ovo' href='#services'>
+            <a className='font-ovo' href='#services'>
               Services
             </a>
           </li>
           <li>
-            <a className='font-Ovo' href='#work'>
+            <a className='font-ovo' href='#work'>
               My Work
             </a>
           </li>
           <li>
-            {' '}
-            <a className='font-Ovo' href='#contact'>
+            <a className='font-ovo' href='#contact'>
               Contact
             </a>
           </li>
         </ul>
-        <div className='flex items-center gap-4 lg:gap-6'>
+        <div className='flex items-center gap-3 sm:gap-4 lg:gap-6'>
           {/* <button>
             <Image src={assets.moon_icon} alt='' className='w-6' />
           </button> */}
           <a
             href='#contact'
-            className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo'
+            className='ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-8 py-2.5 font-ovo xl:flex'
           >
             Contact{' '}
             <Image src={assets.arrow_icon} alt='arrow' className='w-3' />
           </a>
 
-          <button className='block md:hidden ml-3' onClick={openMenu}>
+          <button
+            type='button'
+            aria-label='Open menu'
+            className='ml-1 block p-2 lg:hidden'
+            onClick={openMenu}
+          >
             <Image src={assets.menu_black} alt='menu' className='w-6' />
           </button>
         </div>
 
+        <button
+          type='button'
+          aria-label='Close menu overlay'
+          onClick={closeMenu}
+          className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm transition-opacity lg:hidden ${
+            isMenuOpen
+              ? 'pointer-events-auto opacity-100'
+              : 'pointer-events-none opacity-0'
+          }`}
+        />
+
         {/* Mobile Menu */}
         <ul
-          ref={sideMenuRef}
-          className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500'
+          className={`fixed bottom-0 right-0 top-0 z-50 flex h-dvh w-[min(82vw,20rem)] flex-col gap-4 bg-rose-50 px-8 py-20 shadow-2xl transition duration-500 lg:hidden ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
         >
-          <div className='absolute right-6 top-6' onClick={closeMenu}>
-            <Image
-              src={assets.close_black}
-              alt=''
-              className='w-5 cursor-pointer'
-            />
-          </div>
+          <li className='absolute right-6 top-6 list-none'>
+            <button type='button' aria-label='Close menu' onClick={closeMenu}>
+              <Image
+                src={assets.close_black}
+                alt='Close menu'
+                className='w-5 cursor-pointer'
+              />
+            </button>
+          </li>
 
           <li>
-            <a className='font-Ovo' onClick={closeMenu} href='#top'>
+            <a className='font-ovo' onClick={closeMenu} href='#top'>
               Home
             </a>
           </li>
           <li>
-            <a className='font-Ovo' onClick={closeMenu} href='#about'>
+            <a className='font-ovo' onClick={closeMenu} href='#about'>
               About me
             </a>
           </li>
           <li>
-            <a className='font-Ovo' onClick={closeMenu} href='#services'>
+            <a className='font-ovo' onClick={closeMenu} href='#services'>
               Services
             </a>
           </li>
           <li>
-            <a className='font-Ovo' onClick={closeMenu} href='#work'>
+            <a className='font-ovo' onClick={closeMenu} href='#work'>
               My Work
             </a>
           </li>
           <li>
-            {' '}
-            <a className='font-Ovo' onClick={closeMenu} href='#contact'>
+            <a className='font-ovo' onClick={closeMenu} href='#contact'>
               Contact
             </a>
           </li>
